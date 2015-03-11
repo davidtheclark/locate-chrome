@@ -1,0 +1,38 @@
+{
+  "name": "locate-chrome",
+  "version": "0.1.0",
+  "description": "Find Google Chrome on your system",
+  "main": "index.js",
+  "bin": {
+    "locate-chrome": "bin.js"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "author": {
+    "name": "David Clark",
+    "email": "david.dave.clark@gmail.com",
+    "url": "http://davidtheclark.com"
+  },
+  "dependencies": {
+    "es6-promise": "^2.0.0",
+    "queue-async": "^1.0.0",
+    "userhome": "^1.0.0",
+    "which": "^1.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidtheclark/locate-chrome.git"
+  },
+  "keywords": [
+    "chrome",
+    "google-chrome",
+    "browser",
+    "locate",
+    "find"
+  ],
+  "homepage": "https://github.com/davidtheclark/locate-chrome",
+  "bugs": {
+    "url": "https://github.com/davidtheclark/locate-chrome/issues"
+  }
+}
