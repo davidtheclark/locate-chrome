@@ -1,6 +1,6 @@
 {
   "name": "locate-chrome",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find Google Chrome on your system",
   "main": "index.js",
   "bin": {
@@ -16,8 +16,7 @@
   "dependencies": {
     "es6-promise": "^2.0.0",
     "queue-async": "^1.0.0",
-    "userhome": "^1.0.0",
-    "which": "^1.0.0"
+    "userhome": "^1.0.0"
   },
   "devDependencies": {},
   "repository": {

@@ -3,10 +3,6 @@ var exec = require('child_process').exec;
 var Promise = require('es6-promise').Promise;
 var userhome = require('userhome');
 var queue = require('queue-async');
-var which = require('which');
-
-var osx = process.platform === 'darwin';
-var win = process.platform === 'win32'
 
 module.exports = function(cb) {
   return new Promise(function(resolve) {
@@ -14,9 +10,9 @@ module.exports = function(cb) {
       resolve(r);
     };
 
-    if (osx) {
+    if (process.platform === 'darwin') {
       getOSXPath(finisher);
-    } else if (win) {
+    } else if (process.platform === 'win32') {
       getWinPath(finisher);
     } else {
       getLinuxPath(finisher);
@@ -60,9 +56,9 @@ function getWinPath(finisher) {
 }
 
 function getLinuxPath(finisher) {
-  which('google-chrome', function(r) {
-    var returned = (Object.prototype.toString.call(r) === '[object Error]') ? null : r;
-    finisher(returned);
+  exec('which google-chrome', function(err, r) {
+    if (err) throw err;
+    finisher(r.trim());
   });
 }
 
