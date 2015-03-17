@@ -18,7 +18,10 @@
     "queue-async": "^1.0.0",
     "userhome": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sinon": "1.14.1",
+    "tape": "3.5.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/davidtheclark/locate-chrome.git"
